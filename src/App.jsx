@@ -16,7 +16,8 @@ class App extends React.Component {
                 Authorization: "Client-ID  ???????"
             },
             params:{
-                query: value
+                query: value,
+                per_page : 30
             }
         })
 
