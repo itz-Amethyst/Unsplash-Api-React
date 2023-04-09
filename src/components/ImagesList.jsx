@@ -1,5 +1,6 @@
 import React from 'react';
 import './ImagesList.css';
+import ImageCard from './ImageCard'
 const ImagesList = (props) => {
     return (
         <div>
@@ -8,9 +9,7 @@ const ImagesList = (props) => {
                 <div className="image-list">
                   {props.Data_Image.results.map((image) =>{
                     return (
-                        <div className="image-card">
-                            <img src={image.urls.full} alt={image.alt_description} />
-                        </div>
+                       <ImageCard key={image.id} picture={image}/>
                     )
                   })}
                 </div>
