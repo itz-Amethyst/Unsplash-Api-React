@@ -1,13 +1,17 @@
 import React from "react";
 import './App.css';
+import SearchForm from './components/SearchForm'
 
 class App extends React.Component {
 
+    onSearchFormSubmit = (value) =>{
+        console.log('test')
+    }
 
     render() {
         return (
             <div className="App">
-               <h1>test</h1>
+               <SearchForm onSearchFormSubmit={this.onSearchFormSubmit()}/>
             </div>
         );
     }
